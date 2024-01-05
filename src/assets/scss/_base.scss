@@ -1,0 +1,156 @@
+html, html body{
+    overflow-x: hidden;
+}
+
+  @font-face {
+    font-family: 'Monument-Extended';
+    src: url('../fonts/MonumentExtended-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+  }
+  
+  @font-face {
+    font-family: 'Monument-Extended';
+    src: url('../fonts/MonumentExtended-Ultrabold.ttf') format('truetype');
+    font-weight: 800; /* ultrabold */
+  }
+html, html body{
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Monument-Extended';
+    @include font-20;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $_C7C7C7;
+    background-color: $_bgcolor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Monument-Extended';
+    font-weight: 800;
+    color: $_white;
+    text-transform: capitalize
+};
+
+h1{
+    @include font-85;
+}
+
+h2{
+    @include font-72;
+}
+
+h3{
+    @include font-62;
+}
+
+h4{
+    @include font-48;
+}
+
+h5{
+    @include font-24;
+}
+
+h6{
+    @include font-20;
+}
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    margin-bottom: 0;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    font-family: 'Monument-Extended';
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    outline: none;
+    @include transition;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #f3f3f3;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    @include transition;
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// input[type=number] {
+//     -moz-appearance: textfield;
+// }
+
+.container {
+    max-width: 1569px;
+}
+
+.boxed__btn, .inline__btn {
+    font-family: 'Satoshi-Medium';
+    display: inline-block;
+    border: 1.5px solid transparent;
+    border-radius: 40px;
+    color: $_white;
+    // background: $_0F1919;
+    backdrop-filter: blur(27px);
+    padding: 22px 40px;
+    @include font-20;
+    font-weight: 500;
+    box-sizing: border-box;
+    @include sm {
+        padding: 15px 30px;
+    }
+    &:hover {
+        // border: 1.5px solid $primary;
+        box-shadow: 1px 0px 10px 0px #15B887;
+    }
+
+}
+
+.section__title{
+    & h2{
+        margin-bottom: 28px;
+    }
+    & p{
+        // @include font-25;
+        opacity: 0.78;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,537 @@
+/* Banner CSS */
+.banner {
+    padding-top: 420px;
+    padding-bottom: 315px;
+    position: relative;
+    background-image: url('../img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    z-index: 1;
+    margin-bottom: 12px;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url('../img/hero-bottom-shap.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% 50%;
+        transform: translateY(12px);
+    }
+    @include mmd {
+        padding-top: 150px;
+    }
+    @include sm {
+        padding-bottom: 180px;
+    }
+    @include ssm {
+        padding-bottom: 130px;
+    }
+    &-content {
+        z-index: 9;
+        position: relative;
+        @include mmd{
+            padding-top: 30px;
+        }
+        & h1 {
+            position: relative;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            display: inline-block;
+            @include mmd {
+                line-height: 1.6;
+            }
+        }
+        & p {
+            margin-bottom: 50px;
+            @include font-26;
+            max-width: 724px;
+            @include mmd{
+                margin: 0 auto;
+            }
+        }
+        @include mmd{
+            text-align: center;
+        }
+    }
+   
+}
+
+/* ================================= *
+*  ========= About CSS Start ======= *
+*  ================================= */
+
+.about{
+    padding-top: 121px;
+    position: relative;
+    z-index: 1;
+    & .about_content{
+        @include xxl{
+            max-width: 90%;
+        }
+        @include xl{
+            max-width: 90%;
+        }
+    }
+    .social_icons{
+        li{
+            display: inline-block;
+            margin-right: 57px;
+            margin-bottom: 30px;
+            @include mmd{
+                margin-right: 30px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .about_R_I{
+        position: absolute;
+        right: 0;
+        top: 121px;
+        max-width: 442px;
+        @include lg{
+            max-width: 380px;
+        }
+        @include mmd{
+           display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================== *
+*  ========== Tokenomics CSS Start ======== *
+*  ======================================== */
+.tokenomics{
+    position: relative;
+    z-index: 1;
+    padding-top: 140px;
+    padding-bottom: 65px;
+    @include mmd{
+        padding-top: 130px;
+        padding-bottom: 70px;
+    }
+    & .section-title{
+        h2{
+            text-transform: uppercase;
+        }
+    }
+    & .total_count{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        span{
+            // font-family: 'MabryPro-Medium';
+            @include font-24;
+            color: $_black;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+    }
+    & .tokencharts-list{
+        margin-bottom: 50px;
+        ul{
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                border-radius: 56px;
+                @include font-20;
+                position: relative;
+                padding-left: 42px;
+                display: inline-block;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    left: 12px;
+                    top: 50%;
+                    width: 24px;
+                    height: 24px;
+                    background:#9DFB64;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(2)::before{
+                    background:#42FFD1;
+                }
+                &:nth-child(3)::before{
+                    background:#FFE762;
+                }
+                &:nth-child(4)::before{
+                    background:#FFE762;
+                }
+            }
+        }
+    }
+    & .tokenomics_top_shap{
+        position: absolute;
+        left: 0;
+        top: -20px;
+        width: 100%;
+        height: auto;
+        & img{
+            width: 100%;
+        }
+    }
+    & .chart__area {
+        & .meme_coin_donut_chart{
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            & .donut_m_img{
+                max-width: 320px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                @include sm{
+                    max-width: 260px;
+                }
+                @include ssm{
+                    max-width: 170px;
+                }
+            }
+        }
+        
+    }
+    & .tokenomics_copyTxt{
+        position: relative;
+        border-radius: 16px;
+        max-width: 751px;
+        @include font-18;
+        display: flex;
+        gap: 7px;
+        @include mmd{
+            margin-bottom:50px;
+        }
+        .c_title{
+            font-size: 18px;
+        }
+        input{
+            font-family: 'Monument-Extended';
+            padding: 0;
+            border: 0;
+            width: calc(100% - 285px);
+            text-decoration: underline;
+            @include font-22;
+        }
+        button{
+            padding: 0;
+            background: $_white;
+            border: 0;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            margin-top: -5px;
+            transform: translateY(-50%);
+            & img{
+                transition: all .3s ease-in-out;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+            & .copyed{
+                position: absolute;
+                top: -55px;
+                right: 5px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+/* Add this CSS in your stylesheets or directly in the component */
+
+
+.jinvest{
+    padding-top: 198px;
+    padding-bottom: 198px;
+    position: relative;
+    z-index: 1;
+    background-image: url('../img/dont-just-invest.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    & p{
+        @include font-62;
+        & span{
+            color: #FAD85D;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================== *
+*  ========== Momo Map CSS Start ======== *
+*  ====================================== */
+.roadmap_area{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 1;
+    @include mmd{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    & .road__map__services{
+        padding-top: 66px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @include mmd{
+            grid-template-columns: repeat(2, 1fr);
+            padding:0 3%;
+            padding-top: 50px;
+        }
+        @include sm{
+            grid-template-columns: repeat(1, 1fr);
+            padding:0 10%;
+            padding-top: 50px;
+        }
+        @include ssm{
+            padding:0 3%;
+            padding-top: 50px;
+        }
+        & .single_service_item{
+            position: relative;
+            z-index: 1;
+            padding:85px 30px 24px;
+            border-radius: 4px;
+            border: 3px solid #43257C;
+            background: linear-gradient(284deg, #281B41 2.69%, #0D0B11 92.49%);
+            span{
+                @include font-16;
+                line-height: 160%;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+                display: block;   
+                position: absolute;     
+                top: 0;
+                left: 0; 
+                border-radius: 4px 0px;
+                background: #43257C;
+                min-width: 162px;
+                padding: 14px 24px;
+                text-align: center;
+            }
+            ul{
+                li{
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 16px;
+                    @include font-16;
+                    line-height: 150%;
+                    color: $_C7C7C7;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        top: 0px;
+                        left: 0;
+                        width: 19.07px;
+                        height: 18.92px;
+                        border-radius: 56px;
+                        background: #603BA6;
+                    }
+                }
+            }
+            & .star_shap {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+    }
+    & ul.meme_map_t_number {
+        margin-top: 100px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        border-radius: 40px;
+        background: #191227;
+        height: 4px;
+        @include mmd{
+            margin-top: 50px;
+        }
+        & li{
+            width: 100%;
+            border-radius: 40px;
+            height: 16px;
+            & span {
+                text-align: center;
+                color: #fff;
+                border-radius: 40px;
+                background: #7134E7;
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: -5px auto;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.howtobuy{
+    position: relative;
+    z-index: 1;
+    & .swap_area{
+        padding-top: 160px;
+        padding-bottom: 120px;
+        .htb_iframe{
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 240, 185, 0.10);
+            background: #2B2041;
+            height: 701px;
+            max-width: 644px;
+            margin-right: auto;
+            padding: 19px 10px;
+            & iframe{
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+            @include mmd{
+                margin: 0 auto;
+                height: 450px;
+            }
+            & .s_top_shap{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 16px;
+                z-index: -1;
+                margin-top: -8px;
+            }
+            & .s_bottom_shap{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 16px;
+                z-index: -1;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    
+
+    & .htb_right_img{
+        position: absolute;
+        right: 0;
+        left: auto;
+        bottom: 95px;
+        width: 60%;
+        text-align: end;
+    }
+    .marquee__meme__coin{
+        position: relative;
+        z-index: 2;
+        background: #110E19;
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+
+/* Faq__area CSS */
+
+.faq__area {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    @include sm {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    & .section__title {
+        margin-bottom: 110px;
+        @include sm {
+            margin-bottom: 45px;
+        }
+    }
+    & .accordion-item {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(83, 81, 81, 0.00);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(6, 6, 6, 0.00) 100%);
+        padding: 28px 40px;
+        @include sm {
+            padding: 20px 10px;
+            border-radius: 10px !important;
+        }
+        & .accordion-button {
+            font-weight: 400;
+            padding-bottom: 0;
+            padding-top: 0px;
+            border: 1px solid rgba(83, 81, 81, 0.00);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(6, 6, 6, 0.00) 100%);
+            @include font-22;
+            color: $_white;
+            text-transform: capitalize;
+        }
+        & .accordion-body {
+            color: $_white;
+            opacity: 0.78;
+            @include font-16;
+            line-height: 170%;
+            padding-bottom: 0;
+            max-width: 82%;
+            @include sm {
+                max-width: 100%;
+            }
+        }
+    }
+    & .accordion {
+        --bs-accordion-border-color: transparent;
+        --bs-accordion-btn-focus-border-color: transparent;
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0rem transparent;
+        --bs-accordion-inner-border-radius: 10px - 10px;
+    }
+    .accordion-button:not(.collapsed)::after {
+        background-image: url('../img/angle_up.svg');
+        rotate: 0deg;
+        @include transition;
+        transform: translateY(5px);
+    }
+    .accordion-button::after {
+        background-image: url('../img/angle_down.svg');
+        @include transition;
+    }
+}
