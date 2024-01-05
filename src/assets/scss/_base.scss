@@ -122,31 +122,12 @@ input::-webkit-inner-spin-button {
     max-width: 1569px;
 }
 
-.boxed__btn, .inline__btn {
-    font-family: 'Satoshi-Medium';
-    display: inline-block;
-    border: 1.5px solid transparent;
-    border-radius: 40px;
-    color: $_white;
-    // background: $_0F1919;
-    backdrop-filter: blur(27px);
-    padding: 22px 40px;
-    @include font-20;
-    font-weight: 500;
-    box-sizing: border-box;
-    @include sm {
-        padding: 15px 30px;
-    }
-    &:hover {
-        // border: 1.5px solid $primary;
-        box-shadow: 1px 0px 10px 0px #15B887;
-    }
 
-}
 
 .section__title{
-    & h2{
-        margin-bottom: 28px;
+    & h3{
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     & p{
         // @include font-25;

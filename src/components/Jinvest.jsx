@@ -23,7 +23,7 @@ export default function Jinvest(){
         <div className="jinvest" id='jinvest'>
             <Container>
                 <Row className='justify-content-center align-items-center'>
-                    <Col lg={10} className='text-center'>
+                    <Col lg={11} className='text-center'>
                         <p dangerouslySetInnerHTML={{ __html:desc }} />
                         <ul className='social_icons mt-5 pt-1'>
                         {btns.map((btn, index) => (

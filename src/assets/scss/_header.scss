@@ -9,7 +9,6 @@
         padding: 10px;
     }
     @include sm {
-        background-color: #FF8FE6;
         .navbar-toggler {
             // background: #fff;
             padding: 6px;
@@ -20,8 +19,8 @@
             padding: 18px 0;
             & .navbar-nav {
                 & a {
-                    border-bottom: .8px solid #fff;
-                    padding: 15px;
+                    border-bottom: 1px solid #fff;
+                    padding: 18px 0;
                     border-radius: 0;
                 }
             }
@@ -31,7 +30,6 @@
         }
     }
     .header_socials{
-        margin-right: 8px;
         li{
             border-radius: 9px;
             border: 1px solid rgba(58, 127, 228, 0.60);
@@ -58,7 +56,7 @@
         @include sm{
             position: absolute;
             top: 2px;
-            right: 0;
+            right: 15px;
         }
         
     }
@@ -67,8 +65,18 @@
         border-radius: 8px;
         background: rgba(142, 188, 246, 0.20);
         backdrop-filter: blur(17px);
-        @include md{
-            padding: 0;
+        @include lg{
+            padding:0px 15px;
+        }
+        @include mmd{
+            padding: 0px 15px;
+        }
+        @include sm{
+            padding: 18px;
+
+        }
+        & span.navbar-toggler-icon{
+            background-image: url('../img/bar.png');
         }
     }
     
@@ -97,6 +105,19 @@
         @include mmd{
             border-radius: 10px;
         }
+        @include sm{
+           background: transparent;
+           border:0;
+           padding-left: 0;
+           margin-right: 0;
+           
+            &:hover,
+            &.active,
+            &:focus {
+                color: #FAD85D !important;
+                border: 0;
+            }
+        }
     }
     @include mmd{
         border-radius: 10px;
@@ -108,8 +129,6 @@
     position: fixed;
     padding:10px 23px;
     border-radius: 8px;
-    background: rgba(142, 188, 246, 0.20);
-    backdrop-filter: blur(17px);
     transition: all .3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     @include lg{
@@ -121,11 +140,7 @@
 }
 
 @media(max-width:1280px){
-    .heading{
-        background-color: #FF8FE6;
-    }
     .navbar-nav {
-        margin-top: 15px;
         border-radius: 10px;
         & a {
             border-radius: 10px;

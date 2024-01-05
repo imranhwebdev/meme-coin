@@ -29,9 +29,11 @@ export default function Testimonial(){
                 </Row>
                 <Row>
                     {Tesmonials.map((tesmonial, index)=>(
-                        <Col lg={4} key={index}>
-                            <p>{tesmonial.txt}</p>
-                            <h5>{tesmonial.name}</h5>
+                        <Col lg={4} md={6} key={index} className='mb-4'>
+                           <div className="single_testimonial_item">
+                                <p>{tesmonial.txt}</p>
+                                <h5>{tesmonial.name}</h5>
+                           </div>
                         </Col>
                     ))}
                     

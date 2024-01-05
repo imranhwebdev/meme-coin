@@ -45,8 +45,8 @@ export default function Faq(){
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
+                <Row className='justify-content-center'>
+                    <Col lg='10'>
                         <div className="faq__wrapper">
                             <Accordion defaultActiveKey={accordionData[0].id.toString()}>
                                 {accordionData.map((item) => (

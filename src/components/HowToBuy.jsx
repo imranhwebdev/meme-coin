@@ -19,22 +19,22 @@ export default function HowToBuy(){
     const htbServices = [
         { 
             title: "Set Up Your Wallet",
-            desc: "Download Phantom or your preferred solana wallet for free from the App Store or Google Play Store. If you're using a desktop, get the Google Chrome extension by visiting phantom.app",
+            desc: "Download metamask or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome exten sion by going to metamask.io.",
             logo: htbSL1,
         },
         { 
             title: "Set Up Your Wallet",
-            desc: "Ensure there's some Sol in your wallet to exchange for $Momo. If you don't have any Sol , you can either buy it directly on exchange and transfer it to your wallet.",
+            desc: "Have BSC in your wallet to switch to $BLONDIE. If you don't have any BSC, you can buy directly on metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.",
             logo: htbSL2,
         },
         { 
             title: "Set Up Your Wallet",
-            desc: "Connect to Raydium. Visit raydium.io in your Google Chrome browser or within your Phantom app's browser. Connect your wallet, paste the $Momo token address (2J4sFeo4HXXqmkcpbUj5wHbb1s4dv4oxJVos8ktVYQS4) into Raydium, select $Momo, and confirm the transaction. When prompted by Phantom for a wallet signature, proceed with the signature.",
+            desc: "Connect to Pancakeswap. Go to https://pancakeswap.finance/swap in google chrome or on the browser inside your metamask app. Connect your wallet. Paste the $blondie coin",
             logo: htbSL3,
         },
         { 
             title: "Set Up Your Wallet",
-            desc: "Switch your Sol for $Momo. We have 0 taxes, so you don't need to worry about a specific slippage rate. However, during times of market volatility, you may need to adjust the slippage settings as necessary.",
+            desc: "Switch BSC for $BLONDIE. We a low 5% tax implemented so you don't need to worry about buying with a huge slippage, although you may need to use higher slippage during times of market volatility.",
             logo: htbSL4,
         },
         // Add more buttons as needed

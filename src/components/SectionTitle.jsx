@@ -5,10 +5,10 @@ import SectionTitleImg from '../assets/img/section_title_shap.png';
 export default function SectionTitle({title,des}){
     return(
         <Row>
-            <Col lg={10}>
+            <Col lg={12}>
                 <div className="section__title">
                     <img src={SectionTitleImg} alt="" />
-                    <h2> {title} </h2>
+                    <h3> {title} </h3>
                     <p> {des} </p>
                 </div>
             </Col>

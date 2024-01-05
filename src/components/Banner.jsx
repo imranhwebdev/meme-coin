@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { FaArrowRight } from "react-icons/fa";
 import BlueStarImg from '../assets/img/blue-star.png';
 import YellowStarImg from '../assets/img/yellow-star.png';
+import heroTopboxshap from '../assets/img/hero-top-box-shap.png';
 export default function Banner(){
     const subtitle = "Welcome To";
     const title = "BLONDIE COIN";
@@ -31,16 +32,21 @@ export default function Banner(){
                             <div className="banner_content_top_box text-center">
                                 <span className='d-block'>{subtitle}</span>
                                 <h1 className='d-block'>{title} </h1>
-                                <a href={bctbBtnLink}>{bctbBtnTxt} <FaArrowRight /> </a>
+                                <a href={bctbBtnLink} className='boxed__btn'>{bctbBtnTxt} <FaArrowRight /> </a>
+                                <img src={heroTopboxshap} alt="" />
                             </div>
                         </div>
                     </Col>
+                </Row>
+                <Row className='justify-content-end'>
                     <Col lg='8' className='ml-auto'>
                         <div className="banner_content_middle_box">
                             <p>{bannerMiddleContent}</p>
                         </div>
                     </Col>
-                    <Col lg='8' className='text-center'>
+                </Row> 
+                <Row className='justify-content-center'>
+                    <Col lg='9' className='text-center'>
                         <div className="banner_content_bottom_box">
                             <figure className='bluestar'>
                                 <img src={BlueStarImg} alt="" />
@@ -51,13 +57,14 @@ export default function Banner(){
                             <h4>{bannerCBT}</h4>
                             <span>{bannerCBST}</span>
                             <p>{bannerCBP}</p>
-                            {bannerBtns.map((bannerBtn, item)=>(
-                                <a key={item} href={bannerBtn.bBtnLink}>{bannerBtn.bBtnTxt}</a>
-                            ))}
-                            
+                            <div className="multi_btns">
+                                {bannerBtns.map((bannerBtn, item)=>(
+                                    <a key={item} href={bannerBtn.bBtnLink}>{bannerBtn.bBtnTxt}</a>
+                                ))}
+                            </div>                            
                         </div>
                     </Col>
-                </Row>   
+                </Row>  
             </Container>
         </div>
     )
