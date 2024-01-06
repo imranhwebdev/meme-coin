@@ -42,7 +42,7 @@
             margin-bottom: 10px;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             @include mmd {
-                line-height: 1.6;
+                line-height: 1.2;
             }
         }
         & p {
@@ -66,6 +66,9 @@
             border: 2px solid rgba(255, 255, 255, 0.40);
             background: rgba(156, 62, 8, 0.01);
             backdrop-filter: blur(7px);
+            @include sm{
+                margin-bottom: 60px;
+            }
             & span{
                 @include font-22;
                 font-weight: 800;
@@ -73,6 +76,9 @@
                 text-transform: uppercase;
                 color: $_white;
                 margin-bottom: 5px;
+                @include sm{
+                    margin-bottom: 15px;
+                }
             }
             & .boxed__btn{
                 margin-top: 14px;
@@ -115,6 +121,9 @@
         border: 3px solid #FFF;
         background: rgba(14, 14, 14, 0.20);
         backdrop-filter: blur(12px);
+        @include sm{
+            padding: 20px;
+        }
         & p{
             @include font-20;
             font-weight: 400;
@@ -135,7 +144,10 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         transform: translateY(100px);
-
+        @include sm{
+            margin-top: 30px;
+            transform: translateY(70px);
+        }
         & .bluestar{
             position: absolute;
             left: 40px;
@@ -454,8 +466,8 @@
     padding-top: 140px;
     padding-bottom: 65px;
     @include mmd{
-        padding-top: 130px;
-        padding-bottom: 70px;
+        padding-top: 90px;
+        padding-bottom: 50px;
     }
     & .section__title{
         h3{
@@ -618,6 +630,10 @@
 .testimonial{
     padding-top: 65px;
     padding-bottom: 70px;
+    @include sm{
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
     & .section__title {
         margin-bottom: 30px;
     }
@@ -657,6 +673,10 @@
     @include mmd{
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    @include sm{
+        padding-top: 35px;
+        padding-bottom: 35px;
     }
     & .section__title{
         max-width: 1090px;
@@ -779,6 +799,10 @@
     z-index: 1;
     padding-top: 70px;
     padding-bottom: 70px;
+    @include sm{
+        padding-top: 60px;
+        padding-bottom: 35px;
+    }
     &::before{
         position: absolute;
         content: "";
@@ -804,11 +828,19 @@
         background: rgba(123, 123, 123, 0.03);
         backdrop-filter: blur(6px);
         height: 100%;
+        @include sm{
+            padding: 30px;
+            padding-top: 15px;
+        }
         & img{
             margin-bottom: 25px;;
             max-width: 151px;
             object-fit: contain;
             height: 150px;
+            @include sm{
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
         }
         & h6{
             margin-bottom: 17px;
@@ -821,6 +853,10 @@
     & .swap_area{
         padding-top: 160px;
         padding-bottom: 120px;
+        @include sm{
+            padding-top: 70px;
+            padding-bottom: 50%;
+        }
         .htb_iframe{
             position: relative;
             z-index: 1;
@@ -912,8 +948,22 @@
     }
     & .accordion-item {
         border-radius: 10px;
-        border: 1px solid rgba(83, 81, 81, 0.00);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(6, 6, 6, 0.00) 100%);
+        margin-bottom: 18px;
+        position: relative;
+        border: 1px solid transparent;
+        background-clip: padding-box;
+        background-color: #09080B;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            left: -1px;
+            right: -1px;
+            background: linear-gradient(to bottom, #22c0c300, #473E1D);
+            z-index: -1;
+            border-radius: 10px;
+          }
         & .accordion-header{
             padding:0px 26px;
         }
@@ -946,7 +996,7 @@
             color: $_C7C7C7;
             @include sm{
                 padding: 20px;
-                @include font-16;
+                @include font-14;
             }
         }
         & .accordion-collapse.collapse.show {
@@ -962,16 +1012,24 @@
         --bs-accordion-inner-border-radius: 10px - 10px;
     }
     .accordion-button:not(.collapsed)::after {
-        background-image: url('../img/plus.png');
+        background-image: url('../img/minus.png');
         rotate: 0deg;
         @include transition;
         position: absolute;
         content: "";
-        right: 0;
-        top: 50%;
+        right: -5px;
+        @include sm{
+            right: -15px;
+        }
     }
     .accordion-button::after {
-        background-image: url('../img/minus.png');
+        background-image: url('../img/plus.png');
         @include transition;
+        position: absolute;
+        content: "";
+        right: -5px;
+        @include sm{
+            right: -15px;
+        }
     }
 }

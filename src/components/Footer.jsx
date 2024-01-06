@@ -43,26 +43,24 @@ export default function Footer(){
             <Container>
                 <Faq />
                 <Row className='footer_top align-items-center'>
-                    <Col md={3}>
+                    <Col lg={3} className='text-center text-lg-start mb-4 mb-lg-0'>
                         <a href="/">
                             <figure className='footer_logo'>
                                 <img src={footerLogo} alt="footer logo" />
                             </figure>
                         </a>
                     </Col>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <ul className="footer__menu">
                             {footerMenus.map((footerMenu, index)=>(
                                 <li key={index} ><a href={footerMenu.menuLink}>{footerMenu.menuItem}</a></li>
                             ))}
                             
                         </ul>
-                      
-
                     </Col>
                     
-                    <Col md={3}>
-                        <div className="footer__social text-center text-md-end">
+                    <Col lg={3}>
+                        <div className="footer__social text-center text-lg-end mt-4 mt-lg-0">
                             {socialIcons.map((socialIcon, index) => (
                                 <a key={index} href={socialIcon.link} target='_blank'> {socialIcon.Icon} </a>
                             ))}

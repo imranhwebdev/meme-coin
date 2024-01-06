@@ -108,8 +108,8 @@ export default function HowToBuy(){
                 <SectionTitle title={'how to buy?'}/>  
                 <Row>
                     {htbServices.map((htbService, index) => (
-                        <Col md='6' lg='3' key={index}>
-                            <div className="single__service_item text-center">
+                        <Col md='6' lg={4} xl='3' key={index} className='mb-4 mb-xl-0'>
+                            <div className="single__service_item text-center ">
                                 <figure className="htb_s_l">
                                     <img src={htbService.logo} alt="how to buy single service logo" />
                                 </figure>
