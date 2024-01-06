@@ -2,7 +2,8 @@ import {React} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaTwitter, FaTelegramPlane, FaRedditAlien } from "react-icons/fa";
 import Faq from "./Faq";
-import footerLogo from '../assets/img/site-logo.svg'
+import footerLogo from '../assets/img/site-logo.svg';
+import footerGrash from '../assets/img/footer-grash.png';
 export default function Footer(){
    const footerMenus =  [
     {
@@ -78,6 +79,9 @@ export default function Footer(){
                     </Col>
                 </Row>
             </Container>
+            <figur className="footer__bottom__grash">
+                <img src={footerGrash} alt="footer-bg" />
+            </figur>
         </div>
     )
 }

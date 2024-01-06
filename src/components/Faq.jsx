@@ -1,7 +1,6 @@
-import {React} from 'react'
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap'
 import Accordion from 'react-bootstrap/Accordion';
-import SectionTitle from './SectionTitle';
 export default function Faq(){
     const accordionData = [
         {
@@ -34,24 +33,34 @@ export default function Faq(){
             title:'Is Surge multi-chain?',
             desc:'Our versatile platform allows users to take advantage of various features to automate their trading journey. Seize fruitful opportunities from newly deployed contracts with high speed and automated sniping strategies.',
         },
-    ]
+    ];
+
+    const [activeKey, setActiveKey] = useState(accordionData[0].id.toString());
+
+    const handleAccordionSelect = (selectedKey) => {
+        setActiveKey(selectedKey);
+    };
+
+    const SectionTitle = "FAQ";
     return(
         <div className="faq__area" id='faq'>
             <Container>
                 <Row>
                     <Col>
                         <div className="section__title text-center">
-                            <h4>FAQ</h4>
+                            <h4>{SectionTitle}</h4>
                         </div>
                     </Col>
                 </Row>
                 <Row className='justify-content-center'>
                     <Col lg='10'>
-                        <div className="faq__wrapper">
-                            <Accordion defaultActiveKey={accordionData[0].id.toString()}>
+                       <div className="faq__wrapper">
+                            <Accordion onSelect={handleAccordionSelect} activeKey={activeKey}>
                                 {accordionData.map((item) => (
                                     <Accordion.Item key={item.id} eventKey={item.id.toString()}>
-                                        <Accordion.Header>{item.title}</Accordion.Header>
+                                        <Accordion.Header className={activeKey === item.id.toString() ? 'active' : ''}>
+                                            {item.title}
+                                        </Accordion.Header>
                                         <Accordion.Body>{item.desc}</Accordion.Body>
                                     </Accordion.Item>
                                 ))}

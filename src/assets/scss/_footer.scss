@@ -1,6 +1,24 @@
 .footer_area{
+    position: relative;
+    z-index: 1;
+    background-image: url('../img/footer-bg.png');
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+        position: absolute;
+        content: "";
+        left: -20%;
+        top: -30%;
+        width: 368px;
+        height: 368px;
+        border-radius: 368px;
+        background: #754EBF;
+        filter: blur(337px);
+        z-index: -1;
+    }
     .footer_top{
-        padding-top: 140px;
+        padding-top: 30px;
         padding-bottom: 32px;
         & .footer__menu{
             display: flex;
@@ -16,5 +34,15 @@
         justify-content: space-between;
         padding-top: 32px;
         border-top: 1px solid $_343434;
+    }
+
+    & .footer__bottom__grash{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        img{
+            width: 100%;
+        }
     }
 }

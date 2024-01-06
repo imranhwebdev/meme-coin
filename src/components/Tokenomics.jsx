@@ -10,7 +10,7 @@ const Tokenomics = () => {
     const [Area, setArea] = useState({
         series: [75, 10, 10, 5],
         options: {
-            colors: ['#9DFB64', '#9DFB64', 'rgba(255, 167, 64, 0.42)', '#F1F333'],
+            colors: ['#F1F333', '#FFC900', '#FF90E8', '#FF7051'],
             labels: ['Presale', 'Marketing ', 'Burn', 'CEX'],
             fill: {
               opacity: 1
@@ -110,12 +110,11 @@ const Tokenomics = () => {
         {
             title: "<span>4%</span> MARKETING, <span>1%</span> BURN"
         },
-      ]
+      ];
+      const totalS = "TOTAL SUPPLY";
+      const totalC = "420,690,000,000";
     return(
         <div className="tokenomics" id='tokenomics'>
-          {/* <figure className='tokenomics_top_shap'>
-            <img src={tokenomics_top_shap} alt="" />
-          </figure> */}
             <Container>
                 <Row className='align-items-center'>
                     <Col md={6}>
@@ -143,6 +142,10 @@ const Tokenomics = () => {
                             <div className="meme_coin_donut_chart">
                                 <figure className='donut_m_img'>
                                     <img src={tokenomics_donut_m_img} alt="donut middle img" />
+                                    <div className="donut_m_txt">
+                                      <p>{totalS}</p>
+                                      <span>{totalC}</span>
+                                    </div>
                                 </figure>
                                 <ReactApexChart options={Area.options} series={Area.series} type="donut" />
                             </div>
