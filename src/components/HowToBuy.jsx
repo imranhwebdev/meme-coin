@@ -125,7 +125,7 @@ export default function HowToBuy(){
                             <figure className='s_top_shap'>
                                 <img src={SwapTopShap} alt="" />
                             </figure>
-                            <iframe src=""></iframe>
+                            <iframe src="https://pancakeswap.finance/swap"></iframe>
                             <figure className='s_bottom_shap'>
                                 <img src={SwapBottomShap} alt="" />
                             </figure>
