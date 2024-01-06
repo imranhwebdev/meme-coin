@@ -11,7 +11,7 @@ export default function RugPull(){
             <Container>
                 <Row>
                     <Col lg={6} className='d-flex align-items-end'> 
-                        <figure className='about_R_I'>
+                        <figure className='rugpull_s_img'>
                             <img src={RugPullImg} alt="" />
                         </figure>
                     </Col>

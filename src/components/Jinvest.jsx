@@ -1,6 +1,11 @@
-import {React} from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import AOS from 'aos';
 import { FaTwitter, FaTelegramPlane  } from "react-icons/fa";
+import leftAngle from "../assets/img/just-invest-left-angle.png";
+import rightAngle from "../assets/img/just-invest-right-angle.png";
+import leftdog from "../assets/img/just-invest-left-dog.png";
+import rightdog from "../assets/img/just-invest-right-dog.png";
 export default function Jinvest(){
     const desc = "Don’t just invest in Blondie’s coin, spread the <span>word about the Blondie coin</span> so it can moon to unthinkable numbers.";
     
@@ -17,10 +22,21 @@ export default function Jinvest(){
             icon:<FaTelegramPlane />,
             link:'https://www.google.com',
         }
-    ]
+    ];
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
 
     return(
         <div className="jinvest" id='jinvest'>
+                <figure className='left_angle' data-aos="fade-right">
+                    <img src={leftAngle} alt="" />
+                </figure>
+                <figure className='right_angle' data-aos="fade-left">
+                    <img src={rightAngle} alt="" />
+                </figure>
             <Container>
                 <Row className='justify-content-center align-items-center'>
                     <Col lg={11} className='text-center'>
@@ -37,6 +53,12 @@ export default function Jinvest(){
                     </Col>
                 </Row>   
             </Container>
+            <figure className='left_dog'>
+                <img src={leftdog} alt="" />
+            </figure>
+            <figure className='right_dog'>
+                <img src={rightdog} alt="" />
+            </figure>
         </div>
     )
 }

@@ -77,9 +77,9 @@ export default function Footer(){
                     </Col>
                 </Row>
             </Container>
-            <figur className="footer__bottom__grash">
+            <figure className="footer__bottom__grash">
                 <img src={footerGrash} alt="footer-bg" />
-            </figur>
+            </figure>
         </div>
     )
 }

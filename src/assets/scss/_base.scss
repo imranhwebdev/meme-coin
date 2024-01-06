@@ -130,8 +130,15 @@ input::-webkit-inner-spin-button {
         margin-top: 20px;
     }
     & p{
-        // @include font-25;
-        opacity: 0.78;
         font-weight: 400;
+    }
+    & img{
+        max-width: 392px;
+        @include sm{
+            max-width: 300px;
+        }
+        @include sm{
+            max-width: 270px;
+        }
     }
 }

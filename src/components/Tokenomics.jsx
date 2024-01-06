@@ -117,7 +117,7 @@ const Tokenomics = () => {
         <div className="tokenomics" id='tokenomics'>
             <Container>
                 <Row className='align-items-center'>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <SectionTitle title={'tokenomics'} />
                         <div className="tokenomics__left__list">
                             <ul>
@@ -137,7 +137,7 @@ const Tokenomics = () => {
                             </ul>
                         </div>
                     </Col>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <div className="chart__area">
                             <div className="meme_coin_donut_chart">
                                 <figure className='donut_m_img'>

@@ -1,6 +1,7 @@
 import {React} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaArrowRight } from "react-icons/fa";
+import AOS from 'aos';
 import BlueStarImg from '../assets/img/blue-star.png';
 import YellowStarImg from '../assets/img/yellow-star.png';
 import heroTopboxshap from '../assets/img/hero-top-box-shap.png';

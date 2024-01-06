@@ -50,9 +50,10 @@ export default function RoadMap(){
                     <Col>
                         <div className="meme_map_timeline">
                             <ul className='meme_map_t_number'>
-                                <li><span></span></li>
-                                <li><span></span></li>
-                                <li><span></span></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
                             </ul>
                         </div>
                         <div className="road__map__services">
