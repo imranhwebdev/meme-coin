@@ -38,7 +38,7 @@ export default function Jinvest(){
                     <img src={rightAngle} alt="" />
                 </figure>
             <Container>
-                <Row className='justify-content-center align-items-center'>
+                <Row className='justify-content-center align-items-center' data-aos="fade-up">
                     <Col lg={11} className='text-center'>
                         <p dangerouslySetInnerHTML={{ __html:desc }} />
                         <ul className='social_icons mt-5 pt-1'>

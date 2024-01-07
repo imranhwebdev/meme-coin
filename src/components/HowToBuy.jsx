@@ -1,5 +1,6 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import AOS from 'aos';
 import BrandIcon1 from '../assets/img/brand-icon1.png';
 import BrandTShap from '../assets/img/brand-top-shap.png';
 import BrandBShap from '../assets/img/brand-bottom-shap.png';
@@ -102,8 +103,15 @@ export default function HowToBuy(){
             alt: "Description for the image",
         },
     ];
+    
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
+
     return(
-        <div className="howtobuy" id='howtobuy'>
+        <div className="howtobuy" id='howtobuy' data-aos="fade-up">
             <Container>
                 <SectionTitle title={'how to buy?'}/>  
                 <Row>

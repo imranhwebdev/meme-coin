@@ -38,6 +38,7 @@ export default function Footer(){
     const mailLink = "mailto:faketothemoon@gmail.com";
     const currentYear = new Date().getFullYear();
     const copyrightText = `fake @ ${currentYear}. All rights reserved.`;
+   
     return(
         <div className="footer_area">
             <Container>

@@ -22,6 +22,7 @@
         background-position: bottom;
         background-size: 100% 50%;
         transform: translateY(20px);
+        z-index: -1;
     }
     @include mmd {
         padding-top: 150px;
@@ -931,6 +932,10 @@
         background: rgba(123, 123, 123, 0.03);
         backdrop-filter: blur(6px);
         height: 100%;
+        transition: all .3s ease-in-out;
+        &:hover{
+            border: 2px solid $_white;  
+        }
         @include sm{
             padding: 30px;
             padding-top: 15px;
@@ -940,6 +945,7 @@
             max-width: 151px;
             object-fit: contain;
             height: 150px;
+            transition: all .3s ease-in-out;
             @include sm{
                 max-width: 100px;
                 margin-bottom: 10px;
@@ -951,6 +957,9 @@
         p{
             @include font-14;
             word-wrap: break-word;
+        }
+        &:hover img{
+            transform: translateY(-10px);
         }
     }
     & .swap_area{

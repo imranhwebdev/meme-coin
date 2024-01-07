@@ -1,6 +1,6 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-
+import AOS from 'aos';
 export default function RoadMap(){
     const section_title = "Road mAP";
     const section_desc = "“We are planning to launch a set of 10,000 exclusive NFTs featuring our beloved Daddy Pepe. This digital art collection has been designed by an exclusive NFT artist and will be made available to the community.";
@@ -34,9 +34,14 @@ export default function RoadMap(){
         }
       ];
 
+      useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
 
     return (
-        <div className="roadmap_area" id='roadmap'>
+        <div className="roadmap_area" id='roadmap' data-aos="fade-up">
             <Container>
                 <Row>
                     <Col>

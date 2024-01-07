@@ -1,8 +1,8 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
+import AOS from 'aos';
 import ReactApexChart from "react-apexcharts";
 import { Col, Container, Row } from "react-bootstrap";
 import SectionTitle from './SectionTitle';
-// import tokenomics_top_shap from '../assets/img/tokenomics_shap.png';
 import tokenomics_donut_m_img from '../assets/img/donut_middle_content.png';
 import copyTxt from '../assets/img/copyTxt.png';
 const Tokenomics = () => {
@@ -113,8 +113,15 @@ const Tokenomics = () => {
       ];
       const totalS = "TOTAL SUPPLY";
       const totalC = "420,690,000,000";
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Specify the default animation duration
+      });
+    }, []);
+
     return(
-        <div className="tokenomics" id='tokenomics'>
+        <div className="tokenomics" id='tokenomics' data-aos="fade-up">
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={6}>

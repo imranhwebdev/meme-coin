@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap'
 import Accordion from 'react-bootstrap/Accordion';
 export default function Faq(){
@@ -35,6 +36,13 @@ export default function Faq(){
         },
     ];
 
+    
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
+
     const [activeKey, setActiveKey] = useState(accordionData[0].id.toString());
 
     const handleAccordionSelect = (selectedKey) => {
@@ -43,7 +51,7 @@ export default function Faq(){
 
     const SectionTitle = "FAQ";
     return(
-        <div className="faq__area" id='faq'>
+        <div className="faq__area" id='faq' data-aos="fade-up">
             <Container>
                 <Row>
                     <Col>

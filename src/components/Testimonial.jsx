@@ -1,4 +1,5 @@
-import {React} from 'react';
+import {React, useEffect} from 'react';
+import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap';
 export default function Testimonial(){
     const SectionTitle = 'Reviews';
@@ -15,10 +16,16 @@ export default function Testimonial(){
             txt:'i bought this for my husband, he opened the mail before work & got it everywhere! He hand to change, was late for work & might be getting fired, lol!',
             name:'-Grady Chambers',
         },
-    ]
+    ];
+    
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
 
     return(
-        <div className="testimonial" id='testimonial'>
+        <div className="testimonial" id='testimonial' data-aos="fade-up">
             <Container>
                 <Row>
                     <Col>

@@ -1,4 +1,4 @@
-import {React} from 'react';
+import {React, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaArrowRight } from "react-icons/fa";
 import AOS from 'aos';
@@ -23,7 +23,14 @@ export default function Banner(){
             bBtnTxt: "How To Buy $BLONDIE",
             bBtnLink: "www.google.com",
         }
-    ]
+    ];
+    
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
+
     return(
         <div className="banner" id='home'>
             <Container>
@@ -46,7 +53,7 @@ export default function Banner(){
                         </div>
                     </Col>
                 </Row> 
-                <Row className='justify-content-center'>
+                <Row className='justify-content-center' data-aos="fade-up">
                     <Col lg='9' className='text-center'>
                         <div className="banner_content_bottom_box">
                             <figure className='bluestar'>

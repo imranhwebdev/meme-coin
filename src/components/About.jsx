@@ -1,4 +1,5 @@
-import {React} from 'react';
+import {React, useEffect} from 'react';
+import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap';
 import SectionTitle from './SectionTitle';
 import AboutRI from "../assets/img/about_us_right_img.png";
@@ -41,14 +42,20 @@ export default function About(){
             icon: SocialIcon7,
             link: "https//:www.google.com",
         },
-    ]
+    ];
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Specify the default animation duration
+        });
+      }, []);
+
     return(
         <div className="about" id='about'>
-            <Container>
+            <Container data-aos="fade-up">
                 <SectionTitle title={'ABOUT US'}/>
                 <Row>
                     <Col xxl={9} xl={8} lg={7}>
-                        <div className="about_content">
+                        <div className="about_content" >
                             <p>{desc}</p>
                             <ul className='social_icons mt-5 pt-1'>
                                 {SocialIcons.map((SocialIcon, Index)=>(
@@ -59,7 +66,7 @@ export default function About(){
                     </Col>
                 </Row>   
             </Container>
-            <figure className='about_R_I'>
+            <figure className='about_R_I' data-aos="fade-left">
                 <img src={AboutRI} alt="" />
             </figure>
         </div>
