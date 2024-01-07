@@ -28,10 +28,6 @@ export default function Footer(){
             Icon: <FaTwitter />, 
             link: 'https://twitter.com/blondiecoin' 
         },
-        { 
-            Icon: <FaRedditAlien />, 
-            link: 'https://solana.com/' 
-        },
         // Add more buttons as needed
     ];
     const mailTxt = "blondiecoinofficial@gmail.com";
@@ -71,7 +67,7 @@ export default function Footer(){
                 </Row>   
                 <Row>
                     <Col>
-                        <div className="footer__bottom">
+                        <div className="footer__bottom pb-5">
                             <a href={mailLink}>{mailTxt}</a>
                             <p className='copyright text-center text-md-end'>{copyrightText}</p>
                         </div>
