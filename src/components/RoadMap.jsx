@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import AOS from 'aos';
 export default function RoadMap(){
     const section_title = "Road mAP";
-    const section_desc = "“We are planning to launch a set of 10,000 exclusive NFTs featuring our beloved Daddy Pepe. This digital art collection has been designed by an exclusive NFT artist and will be made available to the community.";
+    const section_desc = "Get your wallets ready jeets! Our roadmap is no joking matter – it's where the serious business happens. Scrape for some funds, because missing out on BLONDIE could be the punchline you regret forever. This is your ticket to a millions of dollars. (Don't let the joke be you, buy $BLONDIE)";
     const services = [
         { 
             title: 'Phase 1', 

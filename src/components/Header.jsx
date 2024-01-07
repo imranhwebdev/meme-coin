@@ -26,11 +26,11 @@ export default function Header(){
       const SocialIcons = [
         { 
             icon: <FaTwitter />, 
-            link: 'https://t.me/momotoken2100' 
+            link: 'https://twitter.com/blondiecoin' 
         },
         { 
             icon: <FaTelegramPlane />, 
-            link: 'https://twitter.com/TokenMomo' 
+            link: 'https://t.me/blondiecoin' 
         },
         // Add more buttons as needed
       ];

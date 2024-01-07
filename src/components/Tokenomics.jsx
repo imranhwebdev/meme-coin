@@ -10,7 +10,7 @@ const Tokenomics = () => {
     const [Area, setArea] = useState({
         series: [75, 10, 10, 5],
         options: {
-            colors: ['#F1F333', '#FFC900', '#FF90E8', '#FF7051'],
+            colors: ['#9EFB64', '#42FFD1', '#FFA740', '#FFE762'],
             labels: ['Presale', 'Marketing ', 'Burn', 'CEX'],
             fill: {
               opacity: 1

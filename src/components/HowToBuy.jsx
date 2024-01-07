@@ -112,6 +112,8 @@ export default function HowToBuy(){
 
     return(
         <div className="howtobuy" id='howtobuy' data-aos="fade-up">
+            <div className="htb_left_shap"></div>
+            <div className="htb_right_shap"></div>
             <Container>
                 <SectionTitle title={'how to buy?'}/>  
                 <Row>

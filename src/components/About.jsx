@@ -16,11 +16,11 @@ export default function About(){
     const SocialIcons = [
         {
             icon: SocialIcon1,
-            link: "https//:www.google.com",
+            link: "https://twitter.com/blondiecoin",
         },
         {
             icon: SocialIcon2,
-            link: "https//:www.google.com",
+            link: "https://t.me/blondiecoin",
         },
         {
             icon: SocialIcon3,

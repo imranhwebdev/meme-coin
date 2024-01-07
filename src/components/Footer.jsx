@@ -26,7 +26,7 @@ export default function Footer(){
         },
         { 
             Icon: <FaTwitter />, 
-            link: 'https://twitter.com/TokenMomo' 
+            link: 'https://twitter.com/blondiecoin' 
         },
         { 
             Icon: <FaRedditAlien />, 
@@ -34,10 +34,10 @@ export default function Footer(){
         },
         // Add more buttons as needed
     ];
-    const mailTxt = "faketothemoon@gmail.com";
-    const mailLink = "mailto:faketothemoon@gmail.com";
+    const mailTxt = "blondiecoinofficial@gmail.com";
+    const mailLink = "mailto:blondiecoinofficial@gmail.com";
     const currentYear = new Date().getFullYear();
-    const copyrightText = `fake @ ${currentYear}. All rights reserved.`;
+    const copyrightText = `$BLONDIE@ ${currentYear}. All rights reserved.`;
    
     return(
         <div className="footer_area">

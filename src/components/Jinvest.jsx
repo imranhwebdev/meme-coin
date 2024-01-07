@@ -16,11 +16,11 @@ export default function Jinvest(){
         },
         {
             icon:<FaTwitter />,
-            link:'https://www.google.com',
+            link:'https://twitter.com/blondiecoin',
         },
         {
             icon:<FaTelegramPlane />,
-            link:'https://www.google.com',
+            link:'https://t.me/blondiecoin',
         }
     ];
     useEffect(() => {
