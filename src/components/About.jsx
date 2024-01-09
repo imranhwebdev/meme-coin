@@ -23,24 +23,16 @@ export default function About(){
             link: "https://t.me/blondiecoin",
         },
         {
-            icon: SocialIcon3,
-            link: "https//:www.google.com",
-        },
-        {
-            icon: SocialIcon4,
-            link: "https//:www.google.com",
-        },
-        {
-            icon: SocialIcon5,
-            link: "https//:www.google.com",
-        },
-        {
             icon: SocialIcon6,
-            link: "https//:www.google.com",
+            link: "https://coinmarketcap.com/",
         },
         {
             icon: SocialIcon7,
-            link: "https//:www.google.com",
+            link: "https://coingecko.com/",
+        },
+        {
+            icon: SocialIcon4,
+            link: "https://bscscan.com/",
         },
     ];
     useEffect(() => {
